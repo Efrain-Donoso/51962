@@ -12,4 +12,4 @@ Para poder usar el analizador debemos correr el archivo de JavaScript "index.js"
 ## Nota
 Al correr el programa se mostrará el arbol en formato de texto en la terminal, si queremos generarlo de manera gráfica con la extensión de ANTLR4 de visual studio, deberemos cambiar en la configuración de la extensión el archivo de texto a leer, que por defecto es 'inputCorrecto1.txt'.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/Efrain-Donoso/51962/blob/main/launch%20json.png)
