@@ -2,7 +2,7 @@
 Proyecto analizador materia Sintaxis y Semántica de los Lenguajes
 
 # Instalación
-Clona este repositorio: git clone https://github.com/mbrachetta/50268.git
+Clona este repositorio: git clone https://github.com/Efrain-Donoso/51962
 
 # Prerrequisitos
 Para poder utilizar este analizador y mostrar el arbol de manera gráfica, deberemos tener instalado Visual Studio Code con la extensión de ANTLR4, de lo contrario solo podremos ver el arbol de la gramática en formato de texto.
