@@ -1,0 +1,7 @@
+mientras verdadero {
+    mientras falso{
+
+    }
+}
+imprimir("51962: Tomas Donoso");
+mientras verdadero{ imprimir ("SintaxisYSemantica"); }

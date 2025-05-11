@@ -1,0 +1,6 @@
+imprimir ("asdjasiojdiojg  "???!!!..: ");
+imprimir("OtraCadenaDeEjemplo");
+mientras falso {
+    imprimir("   ");
+    mientras falso {}
+}
