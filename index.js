@@ -4,7 +4,7 @@ import { CustomCalculatorListener } from "./CustomCalculatorListener.js";
 import { CustomCalculatorVisitor } from "./CustomCalculatorVisitor.js";
 import antlr4, { CharStreams, CommonTokenStream, ParseTreeWalker } from "antlr4";
 import readline from 'readline';
-import fs from 'fs';
+import fs, { writeFile } from 'fs';
 
 async function main() {
     let input;
@@ -23,11 +23,36 @@ async function main() {
         console.log("| Lexema         | Token                         |");
         console.log("--------------------------------------------------");
     
-        // Recorrer todos los tokens generados por el lexer
+        // Borrar archivo en donde estará el código traducido de la gramática a javascript
+        fs.writeFile('programa.js', '', (err) => {
+                if (err) throw err;
+            })
+        
+        // Recorrer todos los tokens generados por el lexer para generar la tabla y el archivo traducido
         for (let token of tokens) {
             const tokenType = CalculatorLexer.symbolicNames[token.type] || `UNKNOWN (${token.type})`;
             const lexema = token.text;
+            let traducido;
             console.log(`| ${lexema.padEnd(14)} | ${tokenType.padEnd(30)}|`);
+
+            // Escribir archivo traducido
+            switch(lexema){
+                case 'mientras':
+                    traducido = 'while';
+                break;
+                case 'verdadero':
+                    traducido = '(true)';
+                break;
+                case 'falso':
+                    traducido = '(false)';
+                break;
+                case 'imprimir':
+                    traducido = 'console.log'
+                break;
+                default:
+                traducido = lexema;
+            }
+            fs.appendFileSync('programa.js', traducido);
         }
         console.log("--------------------------------------------------"); 
     
@@ -46,9 +71,6 @@ async function main() {
         const cadena_tree = tree.toStringTree(parser.ruleNames);
         console.log(`Árbol de derivación: \n${cadena_tree}`);
 
-        // Utilizo un visitor para visitar los nodos que me interesan de mi arbol
-        const visitor = new CustomCalculatorVisitor();
-        visitor.visit(tree);   
 
     }
 }

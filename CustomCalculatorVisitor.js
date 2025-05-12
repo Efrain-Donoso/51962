@@ -15,7 +15,7 @@ export class CustomCalculatorVisitor extends CalculatorVisitor{
     }
 
     visitPrintExpr(ctx) {
-        const value = this.visit(ctx.expr());
+        const value = this.visitPrograma(ctx);
         console.log(`\nResultado: ${value}`);
         return this.visitChildren(ctx);
       }
