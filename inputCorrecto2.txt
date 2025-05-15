@@ -1,4 +1,4 @@
-imprimir ("asdjasiojdiojg  "???!!!..: ");
+imprimir ("asdjasiojdiojg  ???!!!..: ");
 imprimir("OtraCadenaDeEjemplo");
 mientras falso {
     imprimir("   ");

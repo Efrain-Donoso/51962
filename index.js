@@ -8,7 +8,6 @@ import fs, { writeFile } from 'fs';
 
 async function main() {
     let input;
-
         // Lee la entrada desde el archivo específicado, por ej. 'ejemplo1.txt'.
         input = fs.readFileSync('inputCorrecto1.txt', 'utf8');
 
@@ -54,7 +53,8 @@ async function main() {
             }
             fs.appendFileSync('programa.js', traducido);
         }
-        console.log("--------------------------------------------------"); 
+        console.log("--------------------------------------------------\n"); 
+        console.log("La traducción a JavaScript de la gramática analizada se colocó en el archivo 'programa.js' \n");
     
     // Proceso la entrada con el analizador e imprimo el arbol de analisis en formato texto
     inputStream = CharStreams.fromString(input);
@@ -69,12 +69,10 @@ async function main() {
     } 
     else {
         const cadena_tree = tree.toStringTree(parser.ruleNames);
-        console.log(`Árbol de derivación: \n${cadena_tree}`);
-
-
+        console.log(`Árbol de derivación (En formato texto): \n${cadena_tree}`);
+        console.log("\n");
     }
 }
-
 
 // Ejecuta la función principal
 main();

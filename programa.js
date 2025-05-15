@@ -1,1 +1,1 @@
-while(false){while(false){}}console.log("51962: Tomas Donoso");while(true){console.log("SintaxisYSemantica");}
+console.log("asdjasiojdiojg  ???!!!..: ");console.log("OtraCadenaDeEjemplo");while(false){console.log("   ");while(false){}}
