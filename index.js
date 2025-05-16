@@ -1,7 +1,5 @@
 import CalculatorLexer from "./generated/CalculatorLexer.js";
 import CalculatorParser from "./generated/CalculatorParser.js";
-import { CustomCalculatorListener } from "./CustomCalculatorListener.js";
-import { CustomCalculatorVisitor } from "./CustomCalculatorVisitor.js";
 import antlr4, { CharStreams, CommonTokenStream, ParseTreeWalker } from "antlr4";
 import readline from 'readline';
 import fs, { writeFile } from 'fs';
