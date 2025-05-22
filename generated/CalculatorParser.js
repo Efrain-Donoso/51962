@@ -1,4 +1,4 @@
-// Generated from c:/Users/Tomas/ssl-antlr-calculator/Calculator.g4 by ANTLR 4.13.2
+// Generated from c:/Users/Tomas/Documents/GitHub/51962/Calculator.g4 by ANTLR 4.13.2
 // jshint ignore: start
 import antlr4 from 'antlr4';
 import CalculatorListener from './CalculatorListener.js';

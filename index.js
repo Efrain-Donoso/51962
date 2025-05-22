@@ -6,7 +6,7 @@ import fs, { writeFile } from 'fs';
 
 async function main() {
     let input;
-        // Lee la entrada desde el archivo específicado, por ej. 'ejemplo1.txt'.
+        // Lee la entrada desde el archivo específicado, por ej. 'inputCorrecto1.txt'.
         input = fs.readFileSync('inputCorrecto1.txt', 'utf8');
 
         // Proceso la entrada con el analizador para obtener el lexer
